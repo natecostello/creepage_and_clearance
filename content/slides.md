@@ -1,19 +1,45 @@
-## Slide 1
-Slides are separated by a newline, three dashes "---", and another newline.
+# Creepage and Clearance
+
+## Related topics: Dialectrics, Electric Fields, Corona, and Arcs
 
 ---
 
-## Creepage
->"Creepage distance is the shortest distance between energized parts, or between an uninsulated energized part and ground, along the surface of an insulating material." - MIL-E-917
+$$ 3 \cdot 10^{6} \tfrac{v}{m}  $$
+$$ 72000 \tfrac{v}{in}$$
 
-Note: This is to try a note
+Note: What is this number?
 
-------
+---
 
-## Clearance
->"Clearance distance is the shortest point-to-point distance in air between uninsulated energized parts or between an energized part and ground." - MIL-E-917  
+## Creepage Definition
+>"Creepage distance along the surface of an insulating material is the shortest distance between uninsulated energized parts or between an uninsulated energized part and ground."  
+> MIL-DTL-917
 
-------
+![](content/creepage_and_clearance.png)
+
+Note: Not to be confused with Creep - a propensity for materials to slowly deform underload over time.
+
+---
+
+## Clearance Definition
+>"Clearance distance is the shortest point-to-point distance in air between uninsulated energized parts or between an uninsulated energized part and ground."  
+> MIL-DTL-917  
+
+![](content/creepage_and_clearance.png)
+
+---
+
+## Invocation/Specification Effectivity
+
+Creepage and Clearance requirements are invoked through MIL-DTL-917 or MIL-E-917 (for equipment with specifcation effectivity dates that preceed MIL-DTL-917 superceding MIL-E-917). 
+
+Note: This means MIL-E-917 in many cases.
+
+---
+
+Place holder
+
+---
 
 ### Slide 2.2
 So what are the limits?
