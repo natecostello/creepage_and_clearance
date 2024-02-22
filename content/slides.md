@@ -3,19 +3,15 @@ Slides are separated by a newline, three dashes "---", and another newline.
 
 ---
 
-## Slide 2
-For a "subslide" or "vertical slide", the separator is a newline, six dashes "------", and a newline.
+## Creepage
+>"Creepage distance is the shortest distance between energized parts, or between an uninsulated energized part and ground, along the surface of an insulating material." - MIL-E-917
 
 Note: This is to try a note
 
 ------
 
-### Slide 2.1  
-To embed an image, it's simple markdown:
-
-`![description](path-to-image)`
-![cantina](content/cantina.jpeg)
-_caption test_
+## Clearance
+>"Clearance distance is the shortest point-to-point distance in air between uninsulated energized parts or between an energized part and ground." - MIL-E-917  
 
 ------
 
