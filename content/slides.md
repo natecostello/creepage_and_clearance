@@ -75,7 +75,7 @@ Note:
 Clearance requirements:
 ![alt text](content/e11.png)  
 
-For creapage, IEC 60092-503:2007 is invoked.
+For creepage, IEC 60092-503:2007 is invoked.
 
 ---
 
