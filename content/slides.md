@@ -2,10 +2,11 @@
 
 ## Related topics: Dialectrics, Electric Fields, Corona, and Arcs
 
+[Print This Slide Deck](?print-pdf)
+
 ---
 
-$$ 3 \cdot 10^{6} \tfrac{v}{m}  $$
-$$ 72000 \tfrac{v}{in}$$
+# $ 3 \cdot 10^{6} $
 
 Note: What is this number?
 
@@ -29,49 +30,99 @@ Note: Not to be confused with Creep - a propensity for materials to slowly defor
 
 ---
 
-## Invocation/Specification Effectivity
+## Invocation
 
-Creepage and Clearance requirements are invoked through MIL-DTL-917 or MIL-E-917 (for equipment with specifcation effectivity dates that preceed MIL-DTL-917 superceding MIL-E-917). 
+Depending on equipment's specification effectivity date, Creepage and Clearance requirements are invoked through MIL-DTL-917 or MIL-E-917.
 
 Note: This means MIL-E-917 in many cases.
 
 ---
 
-Place holder
+## What are the requirements?
+
+------
+
+## MIL-E-917
+![alt text](content/mil-e-917-table-1.png)
+
+Note: 
+- A, B, and C are ratings of 0-50VA, 50-2000VA, and greater than 2000VA respectively.
+- Open vs Enclosed is per MIL-STD-108.
+
+------
+
+## MIL-DTL-917
+
+The requirements are the same as E-917 up to 1000 volts.
+
+![alt text](content/mil-dtl-917-table-3.png)
+
+Between 1-15KV, the spec invokes IACS (UR) E11. 
+
+Note: 
+- A, B, and C are ratings of 0-50VA, 50-2000VA, and greater than 2000VA respectively.
+- Open vs Enclosed is per MIL-STD-108.
+
+------
+
+## MIL-E-917 and MIL-DTL-917
+
+>"Use of electrical parts or assemblies such as potentiometers, connectors, printed wiring assemblies, and similar devices having lesser creepage and clearance distances is permissible provided these parts and assemblies conform with applicable military specifications, and their energized portions are enclosed to protect against entry of dust and moisture."
+
+------
+
+## IACS (UR) E11
+Clearance requirements:
+![alt text](content/e11.png)  
+
+For creapage, IEC 60092-503:2007 is invoked.
 
 ---
 
-### Slide 2.2
-So what are the limits?
-Like how many bullets?
-- one?
-- two?
-- three?
-- four.
-- five.
-- six!
-- seven!
-- eight!
+## Application Example: Motor Terminal Box
+
+------
+
+## Application Example: Motor Terminal Box
+
+The component in question is a 5KV 3-phase open-wye motor temrinal box in concept design.  The proposed design for internal buswork has them spaced 3 inches apart from each other, and at least three inches apart from the enclosure.  Is this ok?
+
+------
+
+## Application Example: Motor Terminal Box
+
+Step one is determine the peak voltage difference...  
+...what is the terminal voltage?  
+...Is that an RMS value?   
+...Is that a Phase Voltage?    
+...Phase-to-Phase Voltage?  
+...What is the drive topology?    
+## Ask!
 
 
+------
 
-What about a numbered list:
-1. one
-2. two
-3. three
-4. four
-5. five
+## Application Example: Motor Terminal Box
 
----
+You ask, and the supplier provides some additional documentation.  
+- The terminal voltage is 5KV, as measured Phase-to-Return.  
+- The motor is powered by a one cascaded H-Bridge VFD per phase, which features a mid-point high resistance ground.  
+- The system has a requirement to continue operation with a grounded phase.
 
-## Slide 3
+------
 
-Lets try some standard stuff:
+Phase-to-Return Peak: $ 5000V $
+Phase-to-Ground Peak: $ 2500V $
+Phase-to-Phase Peak: $ 2500V \cdot \sqrt{3} = 4330V $
 
-**bold**  
-*italics*
+------
 
----
+
+$ 5000V \cdot \sqrt{2} = 7071V $
+$ $
+
+
+------
 
 ## Slide 4
 
