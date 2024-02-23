@@ -94,8 +94,8 @@ The component in question is a 5KV 3-phase open-wye motor temrinal box in concep
 Step one is determine the peak voltage difference...  
 ...what is the terminal voltage?  
 ...Is that an RMS value?   
-...Is that a Phase Voltage?    
-...Phase-to-Phase Voltage?  
+...Is that a Phase-to-Return Voltage?    
+...Is that a Phase-to-Phase Voltage?  
 ...What is the drive topology?    
 ## Ask!
 
@@ -107,7 +107,7 @@ Step one is determine the peak voltage difference...
 You ask, and the supplier provides some additional documentation.  
 - The terminal voltage is 5KV, as measured Phase-to-Return.  
 - The motor is powered by a one cascaded H-Bridge VFD per phase, which features a mid-point high resistance ground.  
-- The system has a requirement to continue operation with a grounded phase.
+- The system has a requirement to continue operation with a ground present in the system.
 
 ------
 
