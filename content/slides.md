@@ -111,6 +111,12 @@ You ask, and the supplier provides some additional documentation.
 
 ------
 
+## Application Example: Motor Terminal Box
+
+![Alt text](content/motor_terminal_schematic.png)
+
+------
+
 Phase-to-Return Peak: $ 5000V $
 Phase-to-Ground Peak: $ 2500V $
 Phase-to-Phase Peak: $ 2500V \cdot \sqrt{3} = 4330V $
