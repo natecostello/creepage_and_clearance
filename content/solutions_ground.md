@@ -3,9 +3,9 @@
 
 ---
 
-## Schematic
+ ## Schematic With A Ground
 
-![Alt text](content/motor_terminal_schematic.png)
+![Alt Text](content/motor_terminal_schematic_ground.png)
 
 ---
 
@@ -30,43 +30,47 @@ We need to determine the magnitude of the peak voltages between the various cond
 
 ## KVLs
 
-![Alt text](content/motor_terminal_kvls.png)
+![Alt text](content/motor_terminal_kvls_ground.png)
 
 
 ---
 
 ## KVLs
-$ + V_{A-NA} - V_{DA} - V_{DA} = 0 $  <!-- .element: class="fragment highlight-blue" data-fragment-index="1"-->  
+We have all the previous equations...  
 
-$ V_{A-NA} = 2 \cdot V_{DA} $ &nbsp;&nbsp;&nbsp;&nbsp; (1)<!-- .element: class="fragment"-->   
+$ V_{A-NA} = 2 \cdot V_{DA} $ &nbsp;&nbsp;&nbsp;&nbsp; (1)
 
-$ +V_{A-G}-V_{RA}-V_{DA}=0 $ <!-- .element: class="fragment highlight-red" data-fragment-index="2"-->  
+$ V_{A-G} = V_{RA} + V_{DA} $ &nbsp;&nbsp;&nbsp;&nbsp; (2)
 
-$ V_{A-G} = V_{RA} + V_{DA} $ &nbsp;&nbsp;&nbsp;&nbsp; (2)<!-- .element: class="fragment"-->
+$ V_{A-B} = V_{DA} + V_{RA} - V_{RB} - V_{DB} $ &nbsp;&nbsp;&nbsp;&nbsp; (3) 
 
-$ +V_{A-B} +V_{DB} + V_{RB} - V_{RA} - V_{DA} = 0 $ <!-- .element: class="fragment highlight-green" data-fragment-index="3"-->  
+$ V_{AN-G} =  V_{RA} - V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp; (4)
 
-$ V_{A-B} = V_{DA} + V_{RA} - V_{RB} - V_{DB} $ &nbsp;&nbsp;&nbsp;&nbsp; (3) <!-- .element: class="fragment"-->  
+$ V_{AN-BN} = V_{DB} - V_{DA} + V_{RA} - V_{RB}$ &nbsp;&nbsp;&nbsp;&nbsp; (5)
 
-&nbsp;  
-...more KVLs...more algebra... <!-- .element: class="fragment"-->  
+$ V_{A-BN} = V_{DA} + V_{DB} + V_{RA} - V_{RB}$ &nbsp;&nbsp;&nbsp;&nbsp; (6) 
 
-$ V_{AN-G} =  V_{RA} - V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp; (4) <!-- .element: class="fragment"-->  
+...one more KVL...and a little more algebra... <!-- .element: class="fragment" data-fragment-index="1"-->  
 
-$ V_{AN-BN} = V_{DB} - V_{DA} + V_{RA} - V_{RB}$ &nbsp;&nbsp;&nbsp;&nbsp; (5) <!-- .element: class="fragment"-->  
+$ -V_{RB} + V_{DB} = 0 $  <!-- .element: class="fragment" data-fragment-index="2"-->    
 
-$ V_{A-BN} = V_{DA} + V_{DB} + V_{RA} - V_{RB}$ &nbsp;&nbsp;&nbsp;&nbsp; (6) <!-- .element: class="fragment"-->  
+$ V_{RB} = V_{DB} $ &nbsp;&nbsp;&nbsp;&nbsp; (7) <!-- .element: class="fragment"-->  
+
+
 
 ---
 
 ## Simplify
   
-By inspecting the circuit we can see that there are no conducting closed loops that would allow current to flow through the high resistance ground resistors $RA$ and $RB$.  This tells us that $V_{RA}$ and $V_{RB}$ are 0. With this information we can simplify of equations (2), (3), (4), and (5).  
+By inspecting the circuit we can see that there are no conducting closed loops that would allow current to flow through the high resistance ground resistor $RA$, telling us that $V_{RA}$ is 0.  From equation (6), we know that $V_{RB}$ = $V_{DB}$. With this information we can simplify of equations (2), (3), (4), (5), and (6).  
 $V_{A-G} = V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp; (2)  
-$V_{A-B} = V_{DA} - V_{DB}$ &nbsp;&nbsp;&nbsp;&nbsp; (3)  
+$V_{B-G} = 2 \cdot V_{DB}$ &nbsp;&nbsp;&nbsp;&nbsp; (2b) (new)   
+$V_{A-B} = V_{DA} - 2 \cdot V_{DB}$ &nbsp;&nbsp;&nbsp;&nbsp; (3) (changed)   
 $V_{AN-G} = -V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp; (4)  
-$V_{AN-BN} = V_{DB} - V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp; (5)  
-$V_{A-BN} = V_{DA} + V_{DB}$ &nbsp;&nbsp;&nbsp;&nbsp; (6)  
+$V_{BN-G} = 0$ &nbsp;&nbsp;&nbsp;&nbsp; (4b)  (new)  
+$V_{AN-BN} = - V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp; (5)  
+$V_{A-BN} = V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp; (6)  
+$V_{B-AN} = V_{RA} + 2 \cdot V_{DB}$ &nbsp;&nbsp;&nbsp;&nbsp; (6b)  (new)
 
 ---
 
