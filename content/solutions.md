@@ -69,6 +69,8 @@ V_{A-BN} &= V_{DA} + V_{DB} + V_{RA} - V_{RB}
 ---
 
 ## Simplify
+
+![Alt Text](/content/example-motor-schematic.png)
   
 By inspecting the circuit we can see that there are no conducting closed loops that would allow current to flow through the high resistance ground resistors $RA$ and $RB$.  This tells us that $V_{RA}$ and $V_{RB}$ are 0. With this information we can simplify  equations (2)-(6).  
 
@@ -111,7 +113,7 @@ Using equations (2) and (4), we solve for $|V_{A-G}|$ and $|V_{AN-G}|$:
 |V_{AN-G}| &= 2500V \tag{4}\\
 \end{align*}$$`
 
-Note the magnitude bars now being applied!
+Note the magnitude bars now being applied.  These quantities have phase associated with them, so we must be mindful of that.
 
 Note: Equations (1), (2), and (4) are the easiest to solve because they don't involve a sum of quantities with different phase, and thus can be calculated as a simple sum.
 
