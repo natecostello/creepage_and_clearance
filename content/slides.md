@@ -85,13 +85,14 @@ For creepage, IEC 60092-503:2007 is invoked.
 
 ## Application Example: Motor Terminal Box
 
-The component in question is a 5KV 3-phase open-wye motor temrinal box in concept design.  The proposed design for internal buswork has them spaced 3 inches apart from each other, and at least three inches apart from the enclosure.  Is this ok?
+The component in question is a 5KV 3-phase open-wye motor temrinal box in concept design.  The proposed design for internal buswork has them spaced 3 inches apart from each other, and at least three inches apart from the enclosure.  Does this meet requirements? Is this ok?
 
+Note: Those are not the same question!
 ------
 
 ## Application Example: Motor Terminal Box
 
-Step one is determine the peak voltage difference...  
+Step one is determine the peak voltages between all the components...  
 ...what is the terminal voltage?  
 ...Is that an RMS value?   
 ...Is that a Phase-to-Return Voltage?    

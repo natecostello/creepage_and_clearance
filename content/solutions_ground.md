@@ -15,16 +15,21 @@
 
 ## Objective
 
-**Does this meets requirements?**  
-**Is it ok?**  
+**Does this meets requirements? Is it ok?**  
   
-We need to determine the magnitude of the peak voltages between the various conductors, and evaluate whether the spacing meets the required spacing at those voltages.  Specifically, we need to figure out:
+We need to determine the magnitude of the peak voltages between the various conductors, and evaluate whether the spacing meets the required spacing at those voltages.  We need to figure out:
 - $|V_{A-G}|$
 - $|V_{A-B}|$
 - $|V_{A-AN}|$
 - $|V_{AN-G}|$
 - $|V_{A-BN}|$
-- $|V_{AN-BN}|$
+- $|V_{AN-BN}|$  
+
+With the ground, we have a few more that we can no longer base on symmetry:  
+- $|V_{B-G}|$
+- $|V_{B-AN}|$
+- $|V_{B-BN}|$
+- $|V_{BN-G}|$
 
 ---
 
@@ -36,25 +41,18 @@ We need to determine the magnitude of the peak voltages between the various cond
 ---
 
 ## KVLs
-We have all the previous equations...  
+We have all the previous equations: 
 
-$ V_{A-NA} = 2 \cdot V_{DA} $ &nbsp;&nbsp;&nbsp;&nbsp; (1)
+- $ V_{A-NA} = 2 \cdot V_{DA} $ $~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$ (1)
+- $ V_{A-G} = V_{RA} + V_{DA} $ $~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$ (2)
+- $ V_{A-B} = V_{DA} + V_{RA} - V_{RB} - V_{DB}$ $~~~~~~~$ (3) 
+- $ V_{AN-G} =  V_{RA} - V_{DA}$ $~~~~~~~~~~~~~~~~~~~~~~~~~~~~$ (4)
+- $ V_{AN-BN} = V_{DB} - V_{DA} + V_{RA} - V_{RB}$ $~~$ (5)
+- $ V_{A-BN} = V_{DA} + V_{DB} + V_{RA} - V_{RB}$ $~~~~~$ (6) 
 
-$ V_{A-G} = V_{RA} + V_{DA} $ &nbsp;&nbsp;&nbsp;&nbsp; (2)
-
-$ V_{A-B} = V_{DA} + V_{RA} - V_{RB} - V_{DB} $ &nbsp;&nbsp;&nbsp;&nbsp; (3) 
-
-$ V_{AN-G} =  V_{RA} - V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp; (4)
-
-$ V_{AN-BN} = V_{DB} - V_{DA} + V_{RA} - V_{RB}$ &nbsp;&nbsp;&nbsp;&nbsp; (5)
-
-$ V_{A-BN} = V_{DA} + V_{DB} + V_{RA} - V_{RB}$ &nbsp;&nbsp;&nbsp;&nbsp; (6) 
-
-...one more KVL...and a little more algebra... <!-- .element: class="fragment" data-fragment-index="1"-->  
-
-$ -V_{RB} + V_{DB} = 0 $  <!-- .element: class="fragment" data-fragment-index="2"-->    
-
-$ V_{RB} = V_{DB} $ &nbsp;&nbsp;&nbsp;&nbsp; (7) <!-- .element: class="fragment"-->  
+One additional KVL and a little more algebra:   
+- $ -V_{RB} + V_{DB} = 0 $ $~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$ <!-- .element: style="color:orange"-->    
+- $ V_{RB} = V_{DB} $ $~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$ (7)  
 
 
 
@@ -62,15 +60,15 @@ $ V_{RB} = V_{DB} $ &nbsp;&nbsp;&nbsp;&nbsp; (7) <!-- .element: class="fragment"
 
 ## Simplify
   
-By inspecting the circuit we can see that there are no conducting closed loops that would allow current to flow through the high resistance ground resistor $RA$, telling us that $V_{RA}$ is 0.  From equation (6), we know that $V_{RB}$ = $V_{DB}$. With this information we can simplify of equations (2), (3), (4), (5), and (6).  
-$V_{A-G} = V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp; (2)  
-$V_{B-G} = 2 \cdot V_{DB}$ &nbsp;&nbsp;&nbsp;&nbsp; (2b) (new)   
-$V_{A-B} = V_{DA} - 2 \cdot V_{DB}$ &nbsp;&nbsp;&nbsp;&nbsp; (3) (changed)   
-$V_{AN-G} = -V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp; (4)  
-$V_{BN-G} = 0$ &nbsp;&nbsp;&nbsp;&nbsp; (4b)  (new)  
-$V_{AN-BN} = - V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp; (5)  
-$V_{A-BN} = V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp; (6)  
-$V_{B-AN} = V_{RA} + 2 \cdot V_{DB}$ &nbsp;&nbsp;&nbsp;&nbsp; (6b)  (new)
+We can see that there are no conducting closed loops that would allow current to flow through the HRG resistor $RA$, such that $V_{RA}$ is 0.  From equation (7), we know that $V_{RB}$ = $V_{DB}$.  With this information we can simplify equations (2)-(6):  
+- $V_{A-G} = V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2)    
+- $V_{AN-G} = -V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4)  
+- $V_{AN-BN} = - V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (5)  
+- $V_{A-BN} = V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (6)  
+- $V_{B-G} = 2 \cdot V_{DB}$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2b) (new)   
+- $V_{A-B} = V_{DA} - 2 \cdot V_{DB}$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (3) (changed) 
+- $V_{BN-G} = 0$ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (4b)  (new)  
+- $V_{B-AN} = V_{DA} + 2 \cdot V_{DB}$ &nbsp;&nbsp; (6b)  (new)
 
 ---
 
