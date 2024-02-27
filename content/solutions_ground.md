@@ -5,7 +5,7 @@
 
  ## Schematic With A Ground
 
-![Alt Text](content/motor_terminal_schematic_ground.png)
+![Alt Text](content/example-motor-schematic-with-ground.png)
 
 ---
 
@@ -35,7 +35,7 @@ With the ground, we have a few more that we can no longer base on symmetry:
 
 ## KVLs
 
-![Alt text](content/motor_terminal_kvls_ground.png)
+![Alt text](content/example-motor-KVLs-with-ground.png)
 
 
 ---
@@ -131,6 +131,3 @@ Wait...What about that requirement to operate with a ground?
 
 ---
 
-## Schematic With A Ground
-
-![Alt Text](content/motor_terminal_schematic_ground.png)

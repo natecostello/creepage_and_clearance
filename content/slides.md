@@ -87,6 +87,8 @@ For creepage, IEC 60092-503:2007 is invoked.
 
 The component in question is a 5KV 3-phase open-wye motor temrinal box in concept design.  The proposed design for internal buswork has them spaced 3 inches apart from each other, and at least three inches apart from the enclosure.  Does this meet requirements? Is this ok?
 
+![Alt text](content/example-motor-arrangement.png)
+
 Note: Those are not the same question!
 ------
 
@@ -114,32 +116,6 @@ You ask, and the supplier provides some additional documentation.
 
 ## Application Example: Motor Terminal Box
 
-![Alt text](content/motor_terminal_schematic.png)
+![Alt text](content/example-motor-schematic.png)
 
 ------
-
-Phase-to-Return Peak: $ 5000V $
-Phase-to-Ground Peak: $ 2500V $
-Phase-to-Phase Peak: $ 2500V \cdot \sqrt{3} = 4330V $
-
-------
-
-
-$ 5000V \cdot \sqrt{2} = 7071V $
-$ $
-
-
-------
-
-## Slide 4
-
-And some math (no local katex):
-$$ J(\theta_0,\theta_1) = \sum_{i=0} $$  
-
-$$ \frac{1}{2} = 0.5 $$
-
----
-
-## Slide 5 - Lets do a wall of text
-
->Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus feugiat in ante metus dictum at. Sit amet nisl purus in mollis nunc sed id semper. Lacus sed turpis tincidunt id aliquet risus feugiat in. Est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Mauris vitae ultricies leo integer malesuada nunc vel. Elit duis tristique sollicitudin nibh sit amet commodo. Duis at consectetur lorem donec massa sapien. Facilisis gravida neque convallis a cras semper auctor. Lobortis mattis aliquam faucibus purus. Nam at lectus urna duis convallis convallis tellus id. Nisl tincidunt eget nullam non nisi est sit amet. At imperdiet dui accumsan sit amet nulla. Amet nisl purus in mollis nunc sed id. Donec ultrices tincidunt arcu non sodales neque sodales ut.

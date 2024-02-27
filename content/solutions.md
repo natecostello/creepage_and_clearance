@@ -5,7 +5,7 @@
 
 ## Schematic
 
-![Alt text](content/motor_terminal_schematic.png)
+![Alt text](content/example-motor-schematic.png)
 
 ---
 
@@ -17,7 +17,7 @@
 
 **Does this meets requirements?  Is it ok?**  
 
-![alt text](content/motor_terminal_arrangement.png)
+![alt text](content/example-motor-arrangement.png)
 
 We need to determine the magnitude of the peak voltages between the various conductors, and evaluate whether the spacing meets the required spacing at those voltages.  Specifically, we need to figure out:
 - $|V_{A-G}|$
@@ -29,16 +29,10 @@ We need to determine the magnitude of the peak voltages between the various cond
 
 ---
 
-## KVLs
-
-![Alt text](content/motor_terminal_kvls.png)
-
-
----
 
 ## KVLs
 
-![Alt text](content/motor_terminal_kvls.png)
+![Alt text](content/example-motor-KVLs.png)
 
 
 $$ + V_{A-NA} - V_{DA} - V_{DA} = 0 \tag{1}$$  <!-- .element: style="color:blue"-->  
@@ -147,4 +141,4 @@ Wait...What about that requirement to operate with a ground?
 
 ## Schematic With A Ground
 
-![Alt Text](content/motor_terminal_schematic_ground.png)
+![Alt Text](content/example-motor-schematic-with-ground.png)
