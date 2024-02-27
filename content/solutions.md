@@ -15,9 +15,10 @@
 
 ## Objective
 
-**Does this meets requirements?**  
-**Is it ok?**  
-  
+**Does this meets requirements?  Is it ok?**  
+
+![alt text](content/motor_terminal_arrangement.png)
+
 We need to determine the magnitude of the peak voltages between the various conductors, and evaluate whether the spacing meets the required spacing at those voltages.  Specifically, we need to figure out:
 - $|V_{A-G}|$
 - $|V_{A-B}|$
@@ -36,32 +37,47 @@ We need to determine the magnitude of the peak voltages between the various cond
 ---
 
 ## KVLs
-$ + V_{A-NA} - V_{DA} - V_{DA} = 0 $  <!-- .element: class="fragment highlight-blue" data-fragment-index="1"-->  
 
-$ V_{A-NA} = 2 \cdot V_{DA} $ &nbsp;&nbsp;&nbsp;&nbsp; (1)<!-- .element: class="fragment"-->   
+![Alt text](content/motor_terminal_kvls.png)
 
-$ +V_{A-G}-V_{RA}-V_{DA}=0 $ <!-- .element: class="fragment highlight-red" data-fragment-index="2"-->  
 
-$ V_{A-G} = V_{RA} + V_{DA} $ &nbsp;&nbsp;&nbsp;&nbsp; (2)<!-- .element: class="fragment"-->
+$$ + V_{A-NA} - V_{DA} - V_{DA} = 0 \tag{1}$$  <!-- .element: style="color:blue"-->  
 
-$ +V_{A-B} +V_{DB} + V_{RB} - V_{RA} - V_{DA} = 0 $ <!-- .element: class="fragment highlight-green" data-fragment-index="3"-->  
+$$ +V_{A-G}-V_{RA}-V_{DA}=0 \tag{2}$$ <!-- .element: style="color:red"-->  
 
-$ V_{A-B} = V_{DA} + V_{RA} - V_{RB} - V_{DB} $ &nbsp;&nbsp;&nbsp;&nbsp; (3) <!-- .element: class="fragment"-->  
+$$ +V_{A-B} +V_{DB} + V_{RB} - V_{RA} - V_{DA} = 0 \tag{3}$$ <!-- .element: style="color:green"-->  
+
 
 &nbsp;  
-...more KVLs...more algebra... <!-- .element: class="fragment"-->  
+...some algebra yields:  
 
-$ V_{AN-G} =  V_{RA} - V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp; (4) <!-- .element: class="fragment"-->  
-
-$ V_{AN-BN} = V_{DB} - V_{DA} + V_{RA} - V_{RB}$ &nbsp;&nbsp;&nbsp;&nbsp; (5) <!-- .element: class="fragment"-->  
-
-$ V_{A-BN} = V_{DA} + V_{DB} + V_{RA} - V_{RB}$ &nbsp;&nbsp;&nbsp;&nbsp; (6) <!-- .element: class="fragment"-->  
+`$$
+\begin{align} 
+V_{A-NA} &= 2 \cdot V_{DA} \\ 
+V_{A-G} &= V_{RA} + V_{DA} \\
+V_{A-B} &= V_{DA} + V_{RA} - V_{RB} - V_{DB} \\
+V_{AN-G} &=  V_{RA} - V_{DA} \\
+V_{AN-BN} &= V_{DB} - V_{DA} + V_{RA} - V_{RB} \\
+V_{A-BN} &= V_{DA} + V_{DB} + V_{RA} - V_{RB}
+\end{align}
+$$`
 
 ---
 
 ## Simplify
   
-By inspecting the circuit we can see that there are no conducting closed loops that would allow current to flow through the high resistance ground resistors $RA$ and $RB$.  This tells us that $V_{RA}$ and $V_{RB}$ are 0. With this information we can simplify of equations (2), (3), (4), and (5).  
+By inspecting the circuit we can see that there are no conducting closed loops that would allow current to flow through the high resistance ground resistors $RA$ and $RB$.  This tells us that $V_{RA}$ and $V_{RB}$ are 0. With this information we can simplify  equations (2)-(6).  
+
+`$$
+\begin{align*} 
+V_{A-G} &= V_{DA} \tag{2} \\
+V_{A-B} &= V_{DA} - V_{DB} \tag{3} \\
+V_{AN-G} &= -V_{DA} \tag{4}\\
+V_{AN-BN} &= V_{DB} - V_{DA} \tag{5}\\
+V_{A-BN} &= V_{DA} + V_{DB} \tag{6}
+\end{align*}
+$$`
+
 $V_{A-G} = V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp; (2)  
 $V_{A-B} = V_{DA} - V_{DB}$ &nbsp;&nbsp;&nbsp;&nbsp; (3)  
 $V_{AN-G} = -V_{DA}$ &nbsp;&nbsp;&nbsp;&nbsp; (4)  
