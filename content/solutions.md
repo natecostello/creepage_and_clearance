@@ -159,6 +159,8 @@ V_{A-BN} &= V_{DA} + V_{DB} \tag{6}
 |V_{A-BN}|&=2500V  \tag{6}\\
 \end{align*} $$`
 
+![Alt Text](/content/example-motor-phasor-sums.png)
+
 ---
 
 ## Objective
