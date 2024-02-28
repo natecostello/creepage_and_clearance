@@ -9,7 +9,7 @@
 
 ## Terminal Box Layout
 
-![Alt text](/content/example-motor-arrangement.png)
+![Alt text](content/example-motor-arrangement.png)
 
 ---
 
@@ -64,7 +64,7 @@ V_{A-BN} &= V_{DA} + V_{DB} + V_{RA} - V_{RB}
 
 ## Simplify
 
-![Alt Text](/content/example-motor-schematic.png)
+![Alt Text](content/example-motor-schematic.png)
   
 By inspecting the circuit we can see that there are no conducting closed loops that would allow current to flow through the high resistance ground resistors $RA$ and $RB$.  This tells us that $V_{RA}$ and $V_{RB}$ are 0. With this information we can simplify  equations (2)-(6).  
 
@@ -157,7 +157,7 @@ V_{A-BN} &= V_{DA} + V_{DB} \tag{6}
 |V_{A-BN}|&=2500V  \tag{6}\\
 \end{align*} $$`
 
-![Alt Text](/content/example-motor-phasor-sums.png)
+![Alt Text](content/example-motor-phasor-sums.png)
 
 ---
 
