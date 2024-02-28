@@ -13,12 +13,6 @@
 
 ---
 
-## Terminal Box Layout
-
-
-
----
-
 ## Objective
 
 **Does this meets requirements?  Is it ok?**  
@@ -133,7 +127,9 @@ V_{A-BN} &= V_{DA} + V_{DB} \tag{6}
 
 &nbsp;  
 
-## Plug and Chug
+## Sums with Differing Phase
+
+Equations (3), (5), and (6) contain sums (or differences) with differing phases, so these cannot be simply added.
 
 Since this is a balanced three phase system, we can establish a reference such that phase A voltages are at a phase angle of 0.  This means phase B voltages are at a phase angle of $\tfrac{2\pi}{3}$ (or 120 degrees). We also know that both phases have the same magnitude, i.e., $|V_{DA}|=|V_{DB}|=2500V$.  We use these facts, plus some trig, geometry, three-phase rules, phasor math, or vectors (pick your poison) to find the rest of the voltages that involve sums of quantities with differing phase.
 
@@ -170,13 +166,17 @@ V_{A-BN} &= V_{DA} + V_{DB} \tag{6}
 **Does this meets requirements?**  
 **Is it ok?**  
   
-We have all voltages:
-- $|V_{A-G}| = 2500V$
-- $|V_{A-B}| = 4300V$
-- $|V_{A-AN}| = 5000V$
-- $|V_{AN-G}| = 2500V$
-- $|V_{A-BN}| = 2500V$
-- $|V_{AN-BN}| = 4300V$
+We have all voltages of concern.
+
+`$$
+\begin{align*} 
+|V_{A-G}| = 2500V \\
+|V_{A-B}| = 4300V \\
+|V_{A-AN}| = 5000V \\
+|V_{AN-G}| = 2500V \\
+|V_{A-BN}| = 2500V \\
+|V_{AN-BN}| = 4300V \\
+\end{align*} $$`
 
 **MIL-E-917 requires 3" for clearance and (for enclosed equipment) creepage and the minimum distance through air between our conductors is 3"**  
 
