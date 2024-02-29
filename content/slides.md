@@ -85,32 +85,17 @@ For creepage, IEC 60092-503:2007 is invoked.
 
 ## Application Example: Motor Terminal Box
 
-The component in question is a 5KV 3-phase open-wye motor temrinal box in concept design.  The proposed design for internal buswork has them spaced 3 inches apart from each other, and at least three inches apart from the enclosure.  Does this meet requirements? Is this ok?
+The component in question is a 5KV 3-phase open-wye motor terminal box in concept design.  The proposed design for internal buswork has them spaced 3 inches apart from each other, and at least three inches apart from the enclosure.  
 
 ![Alt text](content/example-motor-arrangement.png)
 
-Note: Those are not the same question!
-------
+Details:
+- 5KV is a peak voltage measured phase-to-return
+- The motor is powered by a 3-phase cascaded H-bridge drive which features a mid-point high resistance ground (HRG) on each phase.
+- The system has a requirement to continue operation with a ground on a single phase.
+- The performance spec invokes MIL-E-917
 
-## Application Example: Motor Terminal Box
-
-Step one is determine the peak voltages between all the components...  
-...what is the terminal voltage?  
-...Is that an RMS value?   
-...Is that a Phase-to-Return Voltage?    
-...Is that a Phase-to-Phase Voltage?  
-...What is the drive topology?    
-## Ask!
-
-
-------
-
-## Application Example: Motor Terminal Box
-
-You ask, and the supplier provides some additional documentation.  
-- The terminal voltage is 5KV, as measured Phase-to-Return.  
-- The motor is powered by a one cascaded H-Bridge VFD per phase, which features a mid-point high resistance ground.  
-- The system has a requirement to continue operation with a ground present in the system.
+**Does this meet requirements? Is this ok?**
 
 ------
 

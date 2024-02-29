@@ -7,11 +7,18 @@
 
 ![Alt text](content/example-motor-schematic.png)
 
+___
+
 ## Terminal Box Layout
 
 ![Alt text](content/example-motor-arrangement.png)
 
 ---
+
+## Other Required Information
+
+Phase 
+___
 
 ## Objective
 
@@ -20,12 +27,16 @@
 ![alt text](content/example-motor-arrangement.png)
 
 We need to determine the magnitude of the peak voltages between the various conductors, and evaluate whether the spacing meets the required spacing at those voltages.  Specifically, we need to figure out:
-- $|V_{A-G}|$
-- $|V_{A-B}|$
-- $|V_{A-AN}|$
-- $|V_{AN-G}|$
-- $|V_{A-BN}|$
-- $|V_{AN-BN}|$
+
+`$$
+\begin{align*} 
+&V_{A-NA} \\ 
+&V_{A-G} \\
+&V_{A-B} \\
+&V_{AN-G} \\
+&V_{AN-BN} \\
+&V_{A-BN} 
+\end{align*} $$`
 
 ---
 
@@ -96,18 +107,18 @@ V_{A-BN} &= V_{DA} + V_{DB} \tag{6}
 
 ## Plug and Chug
 
-It was given that phase to return voltage, i.e., $|V_{A-NA}|$ is 5000V. Using equation (1) we solve for $|V_{DA}|$:
-$$|V_{DA}| = 2500V \tag{1}$$  
+It was given that phase to return voltage, i.e., $|V_{A-NA}|$ is 5000V. We can arbitrarily establish a reference phase angle for phase A.  To keep things simple, we'll choose $\phase{0^\circ}$ for phase A quantities. Using equation (1) we solve for $V_{DA}$:
+$$V_{DA} = 2500V\phase{0^\circ} \tag{1}$$  
 
-Using equations (2) and (4), we solve for $|V_{A-G}|$ and $|V_{AN-G}|$:
+Using equations (2) and (4), we solve for $V_{A-G}$ and $V_{AN-G}$:
 
 `$$
 \begin{align*}
-|V_{A-G}| &= 2500V \tag{2} \\
-|V_{AN-G}| &= 2500V \tag{4}\\
+V_{A-G} &= 2500V\phase{0^\circ} \tag{2} \\
+V_{AN-G} &= 2500V\phase{0^\circ} \tag{4}\\
 \end{align*}$$`
 
-Note the magnitude bars now being applied.  These quantities have phase associated with them, so we must be mindful of that.
+
 
 Note: Equations (1), (2), and (4) are the easiest to solve because they don't involve a sum of quantities with different phase, and thus can be calculated as a simple sum.
 
