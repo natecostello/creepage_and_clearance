@@ -158,9 +158,9 @@ V_{A-BN} &= V_{DA} + V_{DB} \tag{6}
 
 `$$ 
 \begin{align*} 
-|V_{A-B}| &= 4330V \tag{3}\\
-|V_{AN-BN}|&=4330V \tag{5}\\
-|V_{A-BN}|&=2500V  \tag{6}
+V_{A-B} &= 4330V\phase{150^{\circ}} \tag{3}\\
+V_{AN-BN} &=4330V\phase{330^{\circ}} \tag{5}\\
+V_{A-BN} &=2500V \phase{240^{\circ}} \tag{6}
 \end{align*} $$`
 
 ![Alt Text](content/example-motor-phasor-sums.png)
