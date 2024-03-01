@@ -103,7 +103,7 @@ Using equations (2) and (4), we solve for $V_{A-G}$ and $V_{AN-G}$:
 `$$
 \begin{align*}
 V_{A-G} &= 2500V\phase{0^\circ} \tag{2} \\
-V_{AN-G} &= -2500V\phase{0^\circ} \tag{4}\\
+V_{AN-G} &= 2500V\phase{180^\circ} \tag{4}\\
 \end{align*}$$`
 
 &nbsp;  
