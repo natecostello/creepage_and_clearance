@@ -79,6 +79,36 @@ For creepage, IEC 60092-503:2007 is invoked.
 
 ---
 
+## Why are the requirements?
+
+The purpose of clearance requirements is to prevent electrical arcs and corona discharge.  
+
+The purpose of creepage requirements is preventing surface tracking, which is really about preventing electrical arcs and corona discharge.
+
+---
+
+## How are the requirements?
+
+Dry air at STP breaks down at $$\vec{E}=3\cdot 10^{6} \tfrac{V}{m}$$
+
+Recall $$ V_{a-b} = \int_{a}^{b}\vec{E} \cdot d\vec{l} $$
+
+To get an average electric field strength between two conductors we divide the voltage between two conductors, by the length.
+
+### Clearance
+
+MIL-E-917, MIL-DTL-917, and IACS (UR) E11 clearance requirements correspond to average electric fields of $$\vec{E}=[0.066 \text{ to }0.31] \cdot 10^{6} \tfrac{V}{m} $$ 
+
+These values requirements contain factors of 10 to 50 margin with respect to the breakdown of air.  This margin will accomodate things like motion, geometric Electric field concentration, and humidity/particulate.
+
+### Creepage
+
+Creepage is a little more arcane.  The presence of conductive or semiconductive particulate on a surface is going to concentrate the electric field above the surface, between the particulate.  The presence of water droplets or other dielectrics will also concentrate the electric field above the surface, between the droplets.  Additionally, commercial specs will factor in tracking resistance of the materials employed.  Its no surprise then that creepage requirements generally involve more separateion, especially in non-enclosed equipment.
+
+
+
+---
+
 ## Application Example: Motor Terminal Box
 
 ------
@@ -103,4 +133,6 @@ Details:
 
 ![Alt text](content/example-motor-schematic.png)
 
-------
+---
+
+## Application Example: Drive IGBT
