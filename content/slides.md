@@ -75,7 +75,10 @@ Note:
 Clearance requirements:
 ![alt text](content/e11.png)  
 
-For creepage, IEC 60092-503:2007 is invoked.
+Clearance requirements:
+>"Creepage distances between live parts and between live parts and earthed metal parts are to be in accordance with IEC 60092-503:2007 for the nominal voltage of the system, the nature of the insulation material and the transient overvoltage developed by switch and fault conditions. "
+
+IEC IEC 60092-503 is not accessible to NAVSEA engineers as far as I can tell.
 
 ---
 
