@@ -48,6 +48,7 @@ Note: This means MIL-E-917 in many cases.
 Note: 
 - A, B, and C are ratings of 0-50VA, 50-2000VA, and greater than 2000VA respectively.
 - Open vs Enclosed is per MIL-STD-108.
+- For > 1kV enclosed equipment, creepage and clearance requirements range between 500-2500 v/in (19685-98425 v/m)
 
 ------
 
@@ -74,11 +75,80 @@ Note:
 ## IACS (UR) E11
 Clearance requirements:
 ![alt text](content/e11.png)  
+> "Intermediate values may be accepted for nominal voltages provided that the next higher air clearance is observed."
+
+> "In the case of smaller distances, appropriate voltage impulse test must be applied."
 
 Clearance requirements:
->"Creepage distances between live parts and between live parts and earthed metal parts are to be in accordance with IEC 60092-503:2007 for the nominal voltage of the system, the nature of the insulation material and the transient overvoltage developed by switch and fault conditions. "
+>"Creepage distances between live parts and between live parts and earthed metal parts are to be in accordance with IEC 60092-503:2007 for the nominal voltage of the system, the nature of the insulation material and the transient overvoltage developed by switch and fault conditions."
 
-IEC IEC 60092-503 is not accessible to NAVSEA engineers as far as I can tell.
+Note:
+- For > 1kV equipment clearance requirements range between 461-2381 v/in (18149-93740 v/m)
+
+------
+
+## IEC 60092-503:2007
+
+IEC 60092-503:2007 is not easily accessible to NAVSEA engineers.  For now, I strongly suggest that, if you own equipment with voltages above 1kV, you email [commandstandards@navy.mil](mailto:commandstandards@navy.mil) with something like the following:
+>To: commandstandards@navy.mil  
+>Subject: MIL-DTL-917F references to IEC 60092-503:2007 (via references to
+IACS (UR) E11
+>
+>To whom it may concern,
+>I am trying to obtain contact information for the technical owner of
+MIL-DTL-917F.  For voltages above 1kV the specification points to IACS (UR)
+E11 for creepage requirements.  IACS (UR) E11 in turn points to IEC
+60092-503:2007 for creepage requirements.  I have been unable to locate this
+specification in any technical libraries to which my organization (NAVSEA)
+ has access, and would like the specification owner to provide guidance
+for access.
+
+Note: 
+- Enough requests will provide a business case for them to subscribe.  
+- Also, avoid invoking expensive specs in your equipment procurement specifications if at all possible.
+
+------
+
+## IEC 60092-503:2007
+
+The IEC takes into account the *Proof Tracking Index* (PTI) aka the *Comparative Tracking Index* (CTI) of the material.
+
+![alt text](content/cti-test.png)  
+_Source: [UL](https://www.ul.com/services/comparative-tracking-index-cti-iec-60112)_
+
+The conductive solution is almost instantly vaporized due to the $I^2R$, but in the process the test material will carbonize a little.  The test continues for 50 drops, and fails if more than a half amp flows for beyond 2 seconds, or the material catches on fire.  The voltage is increased if it passes.  Test voltages are 100V to 600V. Search youtube for test videos. 
+
+### A Short Exercise
+Test solution resistivity is $395\Omega\cdot\text{cm}$  
+Droplet volume is $20\text{mm}^{3}$  
+Electrode spacing is $4\text{mm}$  
+Assume test voltage is $100\text{V}$  
+
+What is the initial current?  
+What is the initial power?
+
+Note:
+- R = 8.1 ohms
+- I = 12.3 amps
+- P = 1234 watts
+
+------
+
+## IEC 60092-503:2007
+
+The IEC has different requirements for generators and main switchboards vs other equipment.
+
+### For Main Switchboards and Generators:
+
+- 443-1527 $\tfrac{v}{in}$ for 300V-PTI Material  (17440-60118 v/m)
+- For 600V-PTI material the values are 20%-30% higher.  (22913-73307 v/m)
+$~~$  
+
+
+### For Other Equiment:
+- 665-1995 $\tfrac{v}{in}$ for 300V-PTI Material  (26181-78543 v/m)
+- For 600V-PTI material the values are 20%-60% higher. (42307-126921) v/m
+
 
 ---
 
@@ -86,7 +156,7 @@ IEC IEC 60092-503 is not accessible to NAVSEA engineers as far as I can tell.
 
 The purpose of clearance requirements is to prevent electrical arcs and corona discharge.  
 
-The purpose of creepage requirements is preventing surface tracking, which is really about preventing electrical arcs and corona discharge.
+The purpose of creepage requirements is preventing or minimizing surface tracking, which is really about preventing electrical arcs and corona discharge.
 
 ---
 
@@ -106,7 +176,7 @@ These values requirements contain factors of 10 to 50 margin with respect to the
 
 ### Creepage
 
-Creepage is a little more arcane.  The presence of conductive or semiconductive particulate on a surface is going to concentrate the electric field above the surface, between the particulate.  The presence of water droplets or other dielectrics will also concentrate the electric field above the surface, between the droplets.  Additionally, commercial specs will factor in tracking resistance of the materials employed.  Its no surprise then that creepage requirements generally involve more separateion, especially in non-enclosed equipment.
+Creepage is a little more arcane.  The presence of conductive or semiconductive particulate on a surface is going to concentrate the electric field above the surface, between the particulate.  The presence of water droplets or other dielectrics will also concentrate the electric field above the surface, between the droplets.  Additionally, commercial specs will factor in tracking resistance of the materials employed.  Its no surprise then that creepage requirements generally involve more separation, especially in non-enclosed equipment.
 
 
 
